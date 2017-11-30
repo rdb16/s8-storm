@@ -1,3 +1,4 @@
-le dépot => https://rdb16@bitbucket.org/sntpkteam/depot-storm.git
+le dépot => https://rdb16@bitbucket.org/sntpkteam/depot-storm.git a été changer pour GitHub
+
 
 
