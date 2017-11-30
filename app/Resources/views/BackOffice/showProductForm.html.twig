@@ -1,0 +1,12 @@
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>{{ pageTitle }}</h1>
+<p>
+    {{ form_start(form, {'attr': {'novalidate': 'nonalidate'}}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</p>
+
+{% endblock %}

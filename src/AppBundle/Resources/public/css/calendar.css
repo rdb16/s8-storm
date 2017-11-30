@@ -1,0 +1,441 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 avr. 2017, 16:24:00
+    Author     : Jean
+*/
+
+
+
+#calendar-container {
+    width: 100%;
+    color: #333;
+}
+
+#calendar-container .calendar-head {
+    background-color: #38D9B5;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+#calendar-container .calendar-head a {
+    color: white;
+}
+
+#calendar-container .calendar-head .previous {
+    float: left;
+}
+
+#calendar-container .calendar-head .next {
+    float: right;
+}
+
+#calendar-container #calendar {
+    width: 100%;
+}
+
+#calendar-container #calendar thead tr {
+    background-color: #EFEFEF;
+    height: 40px;
+}
+
+#calendar-container #calendar thead tr th {
+    text-align: center;
+    font-weight: lighter;
+}
+
+#calendar-container #calendar tbody tr td {
+    background-color: #F9F9F9;
+    text-align: center;
+    border: 1px solid #EFEFEF;
+    height: 125px;
+    width: 14.3%;
+}
+
+#calendar-container #calendar tbody tr td.grey {
+    color: lightgrey;
+}
+
+#calendar-container #calendar tbody tr td.active {
+    cursor: pointer;
+}
+
+#calendar-container #calendar tbody tr td.active:hover .number, 
+#calendar-container #calendar tbody tr td.active:focus .number {
+    color: #38D9B5;
+}
+
+#calendar-container #calendar tbody tr td.today .number {
+    font-family: Gilroy-bold;
+}
+
+#calendar-container #calendar.apointments tbody tr td.today .number {
+    font-family: Gilroy;
+}
+
+#calendar-container #calendar tbody tr td.availability:hover .number,
+#calendar-container #calendar tbody tr td.availability:focus .number {
+    color: #193C96;
+}
+
+#calendar-container #calendar tbody tr td.selected {
+    background-color: white;
+    border: none;
+    color: #193C96;
+}
+
+#calendar-container #calendar tbody tr td div {
+    float: left;
+    height: 100%;
+}
+
+#calendar-container #calendar tbody tr td div.number {
+    font-size: 20px;
+    vertical-align: top;
+    padding-top: 15px;
+    width: 33%;
+}
+#calendar-container #calendar tbody tr td div.data {
+    height: 50%;
+    margin: 10%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#calendar-container #calendar tbody tr td div.data .dot, 
+#day-schedule .timeline tr td.dot-container .dot {
+    border-radius: 100%;
+    height: 5px;
+    width: 5px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.consult {
+    background-color: #428bca;
+}
+
+.treatment {
+    background-color: #FDE800;
+}
+
+.teleconsult {
+    background-color: #38D9B5;
+}
+
+.workshop {
+    background-color: orangered;
+}
+
+.scanner {
+    background-color: orchid;
+}
+
+.blood_sample {
+    background-color: #F85346;
+}
+
+.availability {
+    color: #38D9B5;
+}
+
+#calendar.apointments .availability {
+    font-family: Gilroy-bold;
+}
+
+
+.availability:hover,
+.availability:focus {
+    color: #193C96;
+}
+
+#calendar-container #calendar tbody tr td.grey div.data .dot.consult, 
+#calendar-container #calendar tbody tr td.grey div.data .dot.treatment, 
+#calendar-container #calendar tbody tr td.grey div.data .dot.teleconsult {
+    background-color: lightgrey;
+}
+
+#day-schedule {
+    z-index: 1000;
+    background-color: white;
+    position: absolute;
+    padding: 4px;
+}
+
+#day-schedule .timeline {
+    height: 100%;
+}
+
+#day-schedule .timeline tr td {
+    height: 10%;
+    vertical-align: top;
+    text-align: center;
+}
+
+#day-schedule .timeline tr td.time {
+    border-right: 2px solid #EFEFEF;
+    font-size: 0.8em;
+    padding-right: 1px;
+    cursor: pointer;
+}
+
+#day-schedule .timeline tr td.time.available {
+    border-right: 2px solid #37DCB4;
+}
+
+#day-schedule .timeline tr td.time.available-doted {
+    border-right: 2px dashed #37DCB4;
+}
+
+#day-schedule .timeline tr td.dot-container {
+    width: 10%;
+}
+
+#day-schedule .timeline tr td.dot-container .dot {
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+#day-schedule .timeline tr td.event {
+    font-size: 0.70em;
+    color: #193C96;
+    text-align: left;
+    cursor: help;
+}
+
+#day-schedule .timeline tr td.event .type {
+    font-weight: bold;
+}
+
+#edit-timeline {
+    background-color: white;
+    border: 1px solid lightgray;
+    left: 35%;
+    padding: 3px;
+    position: absolute;
+    top: 45%;
+    width: 300px;
+    z-index: 2000;
+}
+
+#edit-timeline .popin-header {
+    height: 20px;
+    width: 100%;
+    background-color: #37DCB4;
+    color: white;
+    padding:0 5px;
+    font-family: Gilroy-bold;
+    margin-bottom: 5px;
+}
+
+#edit-timeline .popin-header.danger {
+    background-color: #F85346;
+}
+
+input.btn.btn-default.danger {
+    margin-top: -10px;
+    background-color: #F85346;
+    border: 1px solid #F85346;    
+}
+
+input.btn.btn-default.danger:hover,
+input.btn.btn-default.danger:focus {
+    color: #F85346;
+    background-color: white;
+}
+
+#edit-timeline .popin-header i {
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+#edit-timeline form {
+    padding: 5px;
+}
+
+#edit-timeline form label.datetime {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#edit-timeline form label.datetime #minute-timeslot {
+    width: 55px;
+    margin-left: 3px;
+    line-height: 10px;
+}
+
+#edit-timeline form #meeting-data #eventDuration {
+    width: 55px;
+}
+    
+#edit-timeline form  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#edit-timeline form  label.event {
+    line-height: 2.1em;
+}
+
+#edit-timeline form select,
+#edit-timeline form input,  
+#edit-timeline form textarea {
+    width: 50%;
+    resize: none;
+}
+
+#edit-timeline #meeting-data i.glyphicon {
+    color: #37DCB4;
+}
+
+#edit-timeline #meeting-data i.glyphicon:hover,
+#edit-timeline #meeting-data i.glyphicon:focus {
+    cursor: pointer;
+}
+
+#edit-timeline form input[type="submit"] {
+    width: 30%;
+    margin-left: 34%;    
+}
+
+.ui-autocomplete {
+    z-index: 100000000;
+    background-color: white;
+    list-style: none;
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid lightgray;
+    position: absolute;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+.split-bigger-part #calendar-container,
+.split-part #calendar-container {
+    margin-bottom: 20px;
+}
+
+.split-bigger-part #calendar-container #calendar tbody tr td,
+.split-part #calendar-container #calendar tbody tr td {
+    border: none;
+    height: 70px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.split-bigger-part #calendar-container #calendar tbody tr td .number, 
+.split-part #calendar-container #calendar tbody tr td .number {
+    width: 100%;
+    padding-top: 5px;
+    height: 60%;
+    font-size: 1.1em;
+}
+
+.split-bigger-part #calendar-container #calendar tbody tr td .data,
+.split-part #calendar-container #calendar tbody tr td .data {
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    margin: 0 0 0 45%;
+}
+
+#apointment-board {
+    min-height: 180px;
+    /*position: absolute;
+    width: 33%;*/
+    position: inherit;
+    width: 100%;
+}
+
+#apointment-board h4 {
+    font-size: 1.2em;
+}
+
+#apointment-board h3 {
+    margin-bottom: 15px;
+}
+
+#apointment-board ul {
+    margin-left: -40px;
+    width: 115%;
+}
+
+#apointment-board ul li {
+    list-style: none;
+    float: left;
+    color: #38D9B5;
+    border: 2px solid #38D9B5;
+    border-radius: 15px;
+    margin-right: 15px;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    padding-top: 1px;
+    margin-bottom: 5px;
+}
+
+#apointment-board ul li:hover,
+#apointment-board ul li:focus,
+#apointment-board ul li.selected {
+    color: white;
+    background-color: #38D9B5;
+}
+
+#apointment-board ul li input {
+    display: none;
+}
+
+#apointment-board input[type='submit'] {
+    height: 40px;
+    min-width: 100px;
+    margin-right: 5px;
+    border: 0 none;
+    margin-top: 15px;
+}
+
+#apointment-board input[type='submit']:hover,
+#apointment-board input[type='submit']:focus {
+    border: 1px solid #38D9B5;
+}
+
+#apointment-board input[type='submit'].disabled:hover,
+#apointment-board input[type='submit'].disabled:focus,
+#apointment-board input[type='submit'].disabled {
+    background-color: #F0F0F0;
+    border: 0;
+    color: #4D4D4D;
+}
+
+#return {
+    color: #38D9B5;
+    text-align: center;
+}
+
+#return strong {
+    font-family: Gilroy-bold;
+}
+
+#calendar-container #calendar.apointments tbody tr td.today .number {
+    border: 1px solid #00B4FF;
+    border-radius: 50px;
+    padding: 0px;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.box.past-event {
+    font-style: italic;
+    border: 1px dashed;
+}
+
+.box.past-event .box-time {
+    background-color: #E0E0E0;
+}

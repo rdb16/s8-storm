@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Page d'accueil</h1>
+
+    {% if(is_granted('IS_AUTHENTICATED_FULLY')) %}
+        <p><a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a> </p>
+    {% else %}
+        <p><a href="{{ path('fos_user_security_login') }}">Se connecter</a> </p>
+    {% endif %}
+
+
+
+
+
+{% endblock %}

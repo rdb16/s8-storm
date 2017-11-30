@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Page Catalogue</h1>
+    <h3>Salut  {{ username }}</h3>
+    <p>On affiche la liste des produits</p>
+    <ul>
+    {% for item in produits %}
+         <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+    <p><a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a> </p>
+
+
+{% endblock %}

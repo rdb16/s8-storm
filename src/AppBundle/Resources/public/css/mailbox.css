@@ -1,0 +1,154 @@
+
+#mailbox-menu {
+    background-color: #F9F9F9;
+    width: 230px;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -25px;
+    height: 100%;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+.box.new,
+.mailbox-menu-item.new {
+    background-color: #37DCB4;
+    color: white;
+    font-family: Gilroy-bold;
+}
+
+.box.new {
+    font-family: Gilroy;
+}
+
+.last-post.unread {
+    color: #37DCB4;
+    font-family: Gilroy-bold;
+}
+
+.mailbox-menu-item.new:hover, 
+.mailbox-menu-item.new:focus {
+    background-color: #37DCB4;
+}
+
+.mailbox-menu-item {
+    text-align: center;
+    min-height: 65px;
+    line-height: 65px;
+    color: #4D4D4D;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.mailbox-menu-item:hover,
+.mailbox-menu-item:focus {
+    cursor: pointer;
+    background-color: #C7EBFA;
+}
+
+.mailbox-menu-item.selected {
+    background-color: #F0F0F0;
+}
+
+.last-post {
+    width: 22%;
+    float: left;
+    font-size: 0.9em;
+}
+
+.discussion-info {
+    width: 78%;
+    float: left;
+    text-align: left;
+    line-height: 20px;
+    margin-top: 12px;
+}
+
+.discussion-info strong, 
+#mailbox-header strong {
+    font-family: Gilroy-bold;
+}
+
+#mailbox-header strong.new {
+    line-height: 40px;
+    color: #37DCB4;
+}
+
+#mailbox-content {
+    padding-left: 24%;
+    text-align: center;
+    color: #4D4D4D;
+}
+
+#mailbox-content #mailbox-default {
+    margin-top: 10px;
+}
+
+#mailbox-content #mailbox-header {
+    border-top: 2px solid #F9F9F9;
+    background-color: white;
+    margin-top: -20px;
+    border-bottom: 2px solid #F9F9F9;
+    height: 66px;
+    padding-top: 10px;
+}
+
+#mailbox-content #mailbox-discussion {
+    max-height: 310px;
+    padding: 25px;
+}
+
+#mailbox-content #mailbox-discussion .message img {
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+
+#mailbox-content #mailbox-form {
+    margin-top: 10px;
+    margin-left: 15px;
+    /*height: 90px;*/
+}
+
+#mailbox-content #mailbox-form textarea {
+    width: 85%;
+    height: 170px;
+    border-radius: 10px;
+    border: 1px solid #F0F0F0; 
+    resize: none;
+    padding: 5px;
+}
+
+#mailbox-content #mailbox-form input[type=submit] {
+    height: 40px;
+    border: 1px solid #F0F0F0;
+    margin-right: -5px;
+    width: 85px;
+    float: right;
+    margin-top: 124px;
+}
+
+#mailbox-new {
+    padding: 45px;
+    display: block;
+}
+
+#mailbox-new .field {
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+
+#mailbox-new .field input[type=text]{
+    width: 50%;
+}
+
+.message .box {
+    max-width: 90%;
+    text-align: left;
+    overflow-x: auto;
+}
+

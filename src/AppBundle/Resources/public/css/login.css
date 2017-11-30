@@ -1,0 +1,159 @@
+
+#content-body {
+    width: 50%;
+    float: left;
+    height: 500px;
+}
+
+#triangle {
+    float: left;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 500px 100px;
+    border-color: transparent transparent #007bff;
+    margin-top: -20px;
+}
+
+#picture {
+    float: left;
+    background-color: #007bff;
+    width: 38%;
+    padding-top: 100px;
+    padding-bottom: 56px;
+    padding-left: 40px;
+    margin-top: -20px;
+    height: 500px;
+    
+}
+
+#picture img {
+    width: 70%;
+}
+
+.gradiant-top {
+    width: 80%;
+}
+
+#content {
+    width: 100%;
+}
+
+#fos_user_content-form-container {
+    margin-left: 70px;
+    margin-top: 25px;
+}
+
+#fos_user_content-form-container h1 {
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+#fos_user_content-form-container h4 {
+    margin-bottom: 15px;
+} 
+
+#fos_user_content-form-container input[type=text],
+#fos_user_content-form-container input[type=password] {
+    margin-bottom: 25px;
+    background-color: #E1E1E1;
+    border: 0;
+    line-height: 35px;
+    width: 60%;
+    border-radius: 4px;
+    color: #00A0CC;
+    padding-left: 7px;
+    border: 2px solid #00A0CC;
+} 
+
+#fos_user_content-form-container input.required[type=text]:active,
+#fos_user_content-form-container input.required[type=password]:active, 
+#fos_user_content-form-container input.required[type=text]:focus,
+#fos_user_content-form-container input.required[type=password]:focus {
+    border: 2px solid #00A0CC;
+    color: #00A0CC;
+}
+
+#fos_user_content-form-container input.required-failure, 
+#fos_user_content-form-container input.required-failure:active,
+#fos_user_content-form-container input.required-failure:focus {
+    border: 2px solid #F85346;
+    color: #F85346;
+}
+
+#fos_user_content-form-container input[type=submit] {
+    margin-left: 18%;
+    width: 24%;
+    margin-bottom: 20px;
+}
+
+#fos_user_content-form-container input.reset-password[type=submit] {
+    width: 46%;
+    margin-left: 8%;
+}
+
+hr {
+    width: 60%;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+body a {
+    color: #37DCB4;
+    font-family: Gilroy;
+    text-decoration: underline;
+}
+
+body a.close {
+    text-decoration: none;
+}
+
+body a:hover, body a:focus {
+    color: #193C96;
+    text-decoration: none;
+}
+
+#content {
+    min-height: 0;
+}
+
+#fos_user_resetting_form label {
+    width: 100%;
+}
+
+.login {
+    margin-left: 30%;
+    margin-top: 25px;
+}
+
+#fos_user_change_password_form div {
+    margin-bottom: 5px;
+    clear: both;
+}
+
+#fos_user_change_password_form div label {
+    width: 100%;
+}
+
+#fos_user_content-form-container form.fos_user_change_password div input[type=submit] {
+    height: 30px;
+    width: 200px;
+    margin-left: 40px;
+}
+
+#fos_user_change_password_form div ul li {
+    list-style: none;
+    color: red;
+}
+
+#profile a {
+    font-family: Gilroy-bold;
+    font-weight: bold;
+    color: #193C96;
+    text-decoration: none;
+}
+
+#profile a:hover, #profile a:focus {
+    text-decoration: none;
+    color: #37DCB4;
+}

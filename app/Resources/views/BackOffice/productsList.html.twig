@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Cliquer sur un produit pour le modifier</h1>
+    <ul>
+    {% for product in productsList %}
+        <li><h2>{{ product.name }} -Prix : {{ product.price }}&nbsp;€&nbsp; Description : {{ product.description }}</h2>
+                &nbsp;&nbsp;
+              <div class="btn btn-primary">  <a href="{{ path('product_edit', {'id':product.id}) }}">MODIFIER</a></div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="btn btn-danger"><a href="{{ path('product_delete', {'id':product.id}) }}">SUPPRIMER</a></div>
+           </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
